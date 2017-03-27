@@ -11,8 +11,6 @@ import com.example.sun.zhangxun.R;
 /**
  * Created by sun on 2017/3/26.
  *
- *
- *
  */
 
 public class HomeToolbar extends Toolbar {
