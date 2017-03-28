@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sun.zhangxun.activity.SplashActivity">
+    tools:context="com.example.sun.zhangxun.ui.activity.SplashActivity">
 
     <ImageView
         android:id="@+id/imageView_splash"

@@ -1,13 +1,13 @@
-package com.example.sun.zhangxun.activity;
+package com.example.sun.zhangxun.ui.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.sun.zhangxun.R;
-import com.example.sun.zhangxun.base.BaseActivity;
+import com.example.sun.zhangxun.app.BaseActivity;
+import com.example.sun.zhangxun.ui.activity.HomeActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;

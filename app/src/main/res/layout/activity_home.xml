@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sun.zhangxun.activity.HomeActivity">
+    tools:context="com.example.sun.zhangxun.ui.activity.HomeActivity">
 
 
     <include layout="@layout/activity_home_content"/>

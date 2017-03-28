@@ -1,34 +1,28 @@
-package com.example.sun.zhangxun.activity;
+package com.example.sun.zhangxun.ui.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.sun.zhangxun.R;
-import com.example.sun.zhangxun.base.BaseActivity;
-
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.example.sun.zhangxun.app.BaseActivity;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener,NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
     private Toolbar mToolbar;
+    private ViewPager mViewPager;
 //    private CircleImageView mCircleImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
     }
 
@@ -46,10 +40,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,N
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerLayout_home);
         mNavigationView= (NavigationView) findViewById(R.id.navigationView_Home);
         mToolbar= (Toolbar) findViewById(R.id.toolbar_home);
+        mViewPager= (ViewPager) findViewById(R.id.viewPager_home_content);
         mNavigationView.setItemIconTintList(null);
         setSupportActionBar(mToolbar);
 
-//        initNavigationView();
+
     }
 
 
