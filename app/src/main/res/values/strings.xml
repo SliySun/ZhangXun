@@ -2,4 +2,7 @@
     <string name="app_name">掌讯</string>
     <string name="copy_right">Copyright</string>
     <string name="home_et_hint">搜你想搜的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
