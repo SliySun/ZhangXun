@@ -29,7 +29,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract void hideStatusBar();
 
     protected abstract void initView();
-//        setListener();
 
 
     protected abstract void setListener();

@@ -29,4 +29,8 @@ public class HomeToolbar extends Toolbar {
     }
 
 
+
+    public void onIconClickListener(OnClickListener listener){
+
+    }
 }

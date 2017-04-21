@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.sun.zhangxun.R;
 import com.example.sun.zhangxun.app.BaseActivity;
+import com.example.sun.zhangxun.app.BaseFragment;
 import com.example.sun.zhangxun.config.Constants;
 import com.example.sun.zhangxun.ui.Adapter.TabFragmentAdapter;
 import com.example.sun.zhangxun.ui.fragment.TabContentFragment;
@@ -53,6 +54,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,N
         mToolbar= (Toolbar) findViewById(R.id.toolbar_home);
         mTabLayout = (TabLayout) findViewById(R.id.tabLayout_home_tab);
         mViewPager= (ViewPager) findViewById(R.id.viewPager_home_content);
+
         mNavigationView.setItemIconTintList(null);
         setSupportActionBar(mToolbar);
 
@@ -60,20 +62,25 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,N
 
     }
 
+    List<Fragment> mFragments;
+
     private void initPager() {
-        List<Fragment> fragments = new ArrayList<Fragment>();
+        mFragments = new ArrayList<Fragment>();
         for (int i = 0; i < Constants.BASE_TITLES.length; i++) {
-            Fragment fragment= TabContentFragment.newInstance(i);
-            fragments.add(fragment);
+            Fragment fragment= TabContentFragment.newInstance(i+1);
+            mFragments.add(fragment);
         }
-        mViewPager.setAdapter(new TabFragmentAdapter(fragments, Constants.BASE_TITLES, getSupportFragmentManager(), this));
+        mViewPager.setAdapter(new TabFragmentAdapter(mFragments, Constants.BASE_TITLES, getSupportFragmentManager(), this));
         mTabLayout.setupWithViewPager(mViewPager);
-        mTabLayout.setTabTextColors(Color.BLACK,Color.RED);
+//        mTabLayout.setTabTextColors(Color.BLACK,Color.RED);
+
+
     }
 
 
     protected void setListener() {
         mNavigationView.setNavigationItemSelectedListener(this);
+//        mViewPager.addOnPageChangeListener(this);
     }
 
 
@@ -104,5 +111,21 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener,N
         return true;
     }
 
+/*
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        TabContentFragment frgment= (TabContentFragment) mFragments.get(position);
+        frgment.initData();
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+    */
 }

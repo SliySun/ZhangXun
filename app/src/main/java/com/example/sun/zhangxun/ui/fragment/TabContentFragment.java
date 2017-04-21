@@ -42,9 +42,13 @@ public class TabContentFragment extends BaseFragment {
     }
 
     @Override
+    protected void loadData() {
+        mTv.setText("fragment---"+type);
+    }
+
+    @Override
     protected void initView(View view, Bundle savedInstanceState) {
         mTv= (TextView) view.findViewById(R.id.textView_fragment_content);
-        mTv.setText("fragment---"+type);
     }
 
     @Override
