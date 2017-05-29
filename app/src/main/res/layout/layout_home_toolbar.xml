@@ -19,7 +19,7 @@
         android:scaleType="centerCrop"/>
     <TextView
         android:gravity="center_vertical"
-        android:id="@+id/editText_toolbar_search"
+        android:id="@+id/textView_toolbar_search"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:background="@drawable/et_search_bg"
         android:hint="@string/home_et_hint"

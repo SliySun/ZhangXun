@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="item_pressed">#e1e1e1</color>
+    <color name="item_normal">#ffffff</color>
+    <color name="transparent_99ffffff">#99ffffff</color>
+    <color name="transparent_00ffffff">#00ffffff</color>
+    <color name="grey_text_5d5c5c">#5d5c5c</color>
+    <color name="color868686">#868686</color>
+    <color name="table_indicator">#cfd8dc</color>
+    <color name="white_FFFFFF">#FFFFFF</color>
+
 </resources>

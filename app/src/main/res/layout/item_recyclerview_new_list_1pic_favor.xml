@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <CheckBox
+        android:id="@+id/checkbox_item_1pic_favor"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:background="@color/item_normal"
+        />
+        <!--android:visibility="gone"-->
+    <include
+
+        android:id="@+id/item_include_recyclerview_new_list_1pic"
+
+        layout="@layout/item_recyclerview_new_list_1pic"/>
+</LinearLayout>

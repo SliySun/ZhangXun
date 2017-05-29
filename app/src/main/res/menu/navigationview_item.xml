@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:id="@+id/navigationView_menu_group1"
-        >
+    <!--<group android:id="@+id/navigationView_menu_group1">-->
         <!--android:checkableBehavior="single"-->
 
         <item
             android:id="@+id/navigationView_menu_item1"
-            android:icon="@mipmap/ic_launcher"
-            android:title="item1"/>
+            android:icon="@drawable/favoriteicon_profile"
+            android:title="收藏"/>
         <item
             android:id="@+id/navigationView_menu_item2"
-            android:icon="@mipmap/ic_launcher"
-            android:title="item2"/>
-    </group>
+            android:icon="@drawable/ic_live_tv"
+            android:title="视频"/>
+    <!--</group>-->
 
 
 
-    <item android:title="subItem">
-        <menu>
+    <!--<item android:title="subItem">-->
+        <!--<menu>-->
             <item
                 android:id="@+id/navigationView_menu_item3"
-                android:icon="@mipmap/ic_launcher"
-                android:title="item3"/>
-
-        </menu>
-    </item>
+                android:icon="@drawable/ic_favorite"
+                android:title="商城"/>
+    <item
+        android:id="@+id/navigationView_menu_item4"
+        android:icon="@drawable/ic_action_github"
+        android:title="关于"/>
+    <item android:id="@+id/navigationView_menu_item5"
+          android:icon="@drawable/setupicon_profile"
+          android:title="设置"/>
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

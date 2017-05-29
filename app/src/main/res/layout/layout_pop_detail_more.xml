@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/pop_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:background="@drawable/bg_item_selector"
+            android:layout_margin="5dp"
+            android:id="@+id/button_popWin_favor"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/b_newcare_tabbar"/>
+        <ImageView
+            android:background="@drawable/bg_item_selector"
+
+            android:layout_margin="5dp"
+            android:id="@+id/button_popWin_share_sina"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/weibo_share_sina"/>
+        <ImageView
+            android:background="@drawable/bg_item_selector"
+
+            android:layout_margin="5dp"
+            android:id="@+id/button_popWin_share_sms"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/weibo_share_sms"/>
+        <ImageView
+            android:background="@drawable/bg_item_selector"
+
+            android:layout_margin="5dp"
+            android:id="@+id/button_popWin_share_wx_friend"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/wx_share_friend"/>
+        <ImageView
+            android:background="@drawable/bg_item_selector"
+
+            android:layout_margin="5dp"
+            android:id="@+id/button_popWin_share_wx_friends"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/wx_share_friends"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:textSize="12sp"
+            android:layout_width="40dp"
+            android:layout_height="16dp"
+            android:gravity="center"
+            android:text="A-"/>
+
+
+        <com.example.sun.zhangxun.widget.CustomSeekbar
+            android:id="@+id/customSeekbar_popWin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="16dp"
+            android:textSize="14sp"
+            android:text="A+"
+            android:gravity="center"/>
+    </LinearLayout>
+    <TextView
+        android:padding="16dp"
+        android:gravity="center"
+        android:id="@+id/button_popWin_back"
+        android:background="@drawable/bg_item_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回"/>
+</LinearLayout>

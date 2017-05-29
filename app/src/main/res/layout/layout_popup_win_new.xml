@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:id="@+id/pop_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/item1_popup_win_sina"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            layout="@layout/item_popup_win"/>
+        <include
+            android:id="@+id/item1_popup_win_wxfriends"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            layout="@layout/item_popup_win"/>
+        <include
+            android:padding="5dp"
+            android:id="@+id/item1_popup_win_wxfriend"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+
+            layout="@layout/item_popup_win"/>
+        <include
+            android:id="@+id/item1_popup_win_qq"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+
+            layout="@layout/item_popup_win"/>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            >
+            <!--android:visibility="invisible"-->
+
+            <include
+                android:id="@+id/item1_popup_win_qzone"
+                layout="@layout/item_popup_win"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:layout_weight="1"/>
+
+            <include
+                android:id="@+id/item1_popup_win_gmail"
+                layout="@layout/item_popup_win"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:layout_weight="1"/>
+
+            <include
+                android:id="@+id/item1_popup_win_sms"
+                layout="@layout/item_popup_win"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"/>
+
+            <include
+                android:id="@+id/item1_popup_win_favor"
+                layout="@layout/item_popup_win"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+
+    <TextView
+        android:padding="16dp"
+        android:gravity="center"
+        android:id="@+id/button_popWin_back"
+        android:background="@drawable/bg_item_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回"/>
+</LinearLayout>

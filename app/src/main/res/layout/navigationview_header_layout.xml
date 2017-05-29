@@ -23,6 +23,7 @@
         />
 
     <TextView
+        android:id="@+id/textView_navigationView_header_username"
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,14 +32,39 @@
         android:layout_gravity="center_horizontal"
         />
     </LinearLayout>
-    <TextView
-        android:textColor="@android:color/white"
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_navigationView_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="48%"
-        android:textSize="40sp"
-        android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        />
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/imageView_navigationView_header_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_weather_cloudy"/>
+
+        <TextView
+            android:id="@+id/textView_navigationView_header_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView_navigationView_header_weather"
+            android:text="-- --"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/textView_navigationView_header_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageView_navigationView_header_weather"
+            android:text="--°"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            />
+    </RelativeLayout>
 </RelativeLayout>

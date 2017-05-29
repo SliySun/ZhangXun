@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sun.zhangxun.utils.DiskCacheManager;
+
 /**
  * Created by sun on 2017/3/28.
  */
 
 public abstract class BaseFragment extends Fragment{
 
-    private BaseActivity mActivity;
+    public BaseActivity mActivity;
 
     //Fragment的View加载完毕的标记
     private boolean isViewCreated;
@@ -28,10 +30,14 @@ public abstract class BaseFragment extends Fragment{
         this.mActivity= (BaseActivity)context;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        System.out.println("onCreateView");
 //        return super.onCreateView(inflater, container, savedInstanceState);
         View view=inflater.inflate(getLayoutId(),container,false);
         initView(view,savedInstanceState);
@@ -40,12 +46,12 @@ public abstract class BaseFragment extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        System.out.println("onViewCreated");
-        super.onViewCreated(view, savedInstanceState);
+//        super.onViewCreated(view, savedInstanceState);
         isViewCreated = true;
         lazyLoad();
 
     }
+
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
@@ -65,19 +71,23 @@ public abstract class BaseFragment extends Fragment{
     private void lazyLoad() {
         //这里进行双重标记判断,是因为setUserVisibleHint会多次回调,并且会在onCreateView执行前回调,必须确保onCreateView加载完毕且页面可见,才加载数据
         if (isViewCreated && isUIVisible){
-            System.out.println("loadData");
-            loadData();
+            initData();
             //数据加载完毕,恢复标记,防止重复加载
             isUIVisible = false;
             isViewCreated = false;
         }
     }
 
-    protected abstract void loadData();
+    protected abstract void initData();
 
     protected abstract void initView(View view, Bundle savedInstanceState);
 
     protected abstract int getLayoutId();
 
-
+    @Override
+    public void onPause() {
+        super.onPause();
+        //同步 DiskCache 的缓存日志
+        DiskCacheManager.flush();
+    }
 }
