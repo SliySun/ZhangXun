@@ -71,7 +71,7 @@ dependencies {
     compile files('libs/SocialSDK_email.jar')
     compile files('libs/SocialSDK_QQ_Simplify.jar')
     compile files('libs/SocialSDK_sms.jar')
-    compile project(':swipelibrary')
+//    compile project(':swipelibrary')
     compile 'com.android.support:support-v4:25.3.0'
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
