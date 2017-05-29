@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':AMapLocationDemo', ':NaviDemo', ':AMap2DDemo', ':AMap3DDemo', ':samples', ':library', ':swipelibrary'

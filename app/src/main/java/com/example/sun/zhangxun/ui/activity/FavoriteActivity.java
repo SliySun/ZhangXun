@@ -40,6 +40,7 @@ import java.util.Map;
 
 public class FavoriteActivity extends SwipeBackMvpActivity implements IFavorConstract.IFavorView,BaseQuickAdapter.OnItemClickListener,View.OnClickListener,BaseQuickAdapter.OnItemChildClickListener{
 
+
     private ImageView mIv_back;
     private TextView mTv_title;
     private TextView mTv_edit;
